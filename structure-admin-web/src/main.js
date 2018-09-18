@@ -25,8 +25,6 @@ router.beforeEach((to, from, next) => {
   let key = to.meta.key;
   if (key) {
     store.dispatch("getUserInfo", {}).then(response => {
-      console.log(response, 'response');
-      console.log(from.name,to.name,'hhhhhhhhhhhhhh');
       if(!response.data){
         if (to.path !== '/login') {
           return next('/login');

@@ -2,9 +2,10 @@
 const Base = require('./base');
 module.exports = class extends Base {
   async addWeeklyAction() {
-    let { username, content, date } = this.post();
+    let { content, date } = this.post();
+    let usernum = this.user.usernum;
     try {
-      let row = await this.model('week').add({username: username, content: content, date: date});
+      let row = await this.model('week').add({usernum, content, date});
       console.log(row, 'row')
       return this.success(row);
     } catch(e) {

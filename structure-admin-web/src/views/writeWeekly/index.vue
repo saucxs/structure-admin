@@ -33,7 +33,11 @@
           date: this.currentDate
         }
         this.addWeekly(params).then(res => {
-         console.log(res,'res');
+          if(res.errno == 0 ){
+            this.$message.success(res.errmsg|| '提交成功');
+          }else{
+            this.$message.error(res.errmsg|| '服务开小差');
+          }
         })
       }
     }

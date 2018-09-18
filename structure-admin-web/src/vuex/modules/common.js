@@ -3,7 +3,7 @@ import {
 } from "../mutation-types.js";
 
 const state = {
-  systemName: '周报系统',
+  systemName: 'XXX系统',
   userInfo:{
 
   }
