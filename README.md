@@ -16,8 +16,8 @@
 > + ThinkJS（ Node端框架） [官方网站](https://thinkjs.org/)
 > + Vue.js（客户端双向数据绑定框架）  [官方网站](https://cn.vuejs.org/)
 
-### 二、系统截图
- [线上地址](http://structure_admin.mwcxs.top)
+### 二、线上地址
+线上地址： [线上地址](http://structure_admin.mwcxs.top)
 
 ### 三、系统截图
 #### 3.1 登录页
