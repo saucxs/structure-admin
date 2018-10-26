@@ -1,6 +1,6 @@
 # structure-admin
-技术栈：nodeJS+vue+vuex+mysql+redis，前端使用vue的element-ui的组件库，后端使用nodeJS的服务，数据库mysql，缓存使用的是redis
-，后端完全使用`nodeJS`，数据库使用`mysql`，基于`nodejs的thinkjs框架搭建的`
+是一个后台管控系统的架子，技术栈：nodeJS+vue+vuex+mysql+redis，前端使用vue的element-ui的组件库，后端使用nodeJS的服务，数据库mysql，缓存使用的是redis
+，后端完全使用`nodeJS`，数据库使用`mysql`，基于`nodejs的thinkjs框架搭建的`，全栈开发。
 支持：
 > + 1、vuex来实现状态管理
 > + 2、静态页面，引入后端服务（nodeJs）
@@ -9,9 +9,6 @@
 > + 5、左右的滚动条是相互独立的，去掉body上的滚动条
 
 如果喜欢`nodeJS`写的后端，支持大前端，支持全栈开发，请请`star`并`fork`项目。
-
-周报系统是基于这个后台管理框架下搭建，周报系统演示地址为：[系统网站平台](http://book.mwcxs..top)
-周报系统源码地址：[周报系统源码地址](https://github.com/saucxs/weekly)
 
 如有使用问题请留言。
 
@@ -71,8 +68,8 @@ exports.model = {
   },
   mysql: {
     handle: mysql,
-    database: 'weekly',
-    prefix: 'week_',
+    database: 'structure_admin',
+    prefix: 'structure_',
     encoding: 'utf8',
     host: '127.0.0.1',   //本地数据库
     port: '3306',　　　　　//数据库端口
@@ -82,7 +79,9 @@ exports.model = {
   }
 };
 ````
-7、分别对前后端分离的项目启动
+7、数据库文件，地址在``structure-admin-node/src/common/mysql/structure_admin.sql``
+
+8、分别对前后端分离的项目启动
 
 (1)前端vue的structure-admin-web的启动
 ````
@@ -93,3 +92,7 @@ npm run dev
 ````
 npm start
  ````
+
+### 说明
+周报系统是基于structure-admin后台管理框架下搭建，周报系统演示地址为：[系统网站平台](http://weekly.mwcxs.top)
+周报系统源码地址：[周报系统源码地址](https://github.com/saucxs/weekly)

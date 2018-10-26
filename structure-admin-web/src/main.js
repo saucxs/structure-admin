@@ -19,13 +19,10 @@ Vue.use(ElementUI);
 
 /*路由处理*/
 router.beforeEach((to, from, next) => {
-  let menuId;
-  let auditResult;
-  let applicationVerifyFlag;
   let key = to.meta.key;
   if (key) {
     store.dispatch("getUserInfo", {}).then(response => {
-      if(!response.data){
+      if(JSON.stringify(response.data) === '{}'){
         if (to.path !== '/login') {
           return next('/login');
         }
@@ -39,7 +36,7 @@ router.beforeEach((to, from, next) => {
       }
     });
   } else {
-   next();
+    next({path: to.path});
   }
 });
 

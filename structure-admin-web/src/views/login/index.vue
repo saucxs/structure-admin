@@ -9,7 +9,7 @@
         <div class="content_box_form">
           <h1>登&nbsp;&nbsp;录</h1>
           <p class="form_content" >
-            <input minlength="6" maxlength="30" type="text" name="usernum" placeholder="用户名/手机/邮箱" v-model="usernum" />
+            <input minlength="6" maxlength="30" type="text" name="username" placeholder="用户名/手机/邮箱" v-model="username" />
           </p>
           <p class="form_content" >
             <input minlength="6" maxlength="16" type="password" placeholder="密码" @keyup.enter="submit"  v-model="password" />
@@ -42,14 +42,13 @@
         "getUserInfo",
       ]),
       submit(){
-        var usernum =  this.usernum;
+        var username =  this.username;
         var password = this.password;
         var param = {
-          usernum : usernum,
+          username : username,
           password : password
         }
-        console.log(param,'param');
-        if(usernum && password){
+        if(username && password){
           this.login(param).then(res => {
             if(res.errno == 0 ){
               this.$message.success(res.errmsg|| '登陆成功');

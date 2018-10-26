@@ -9,7 +9,8 @@ const home = () => import("@/views/home");
 
 // 写当前周
 const writeWeekly = () => import("@/views/writeWeekly/index");
-//历史周报
+
+// 历史周报
 const weeklyList = () => import("@/views/weeklyList/index");
 
 Vue.use(Router)
@@ -27,23 +28,25 @@ export default new Router({
     {
       path: '/',
       name: 'home',
+      meta: {
+        key: '1'
+      },
       component: home,
       children: [{
         path: '/writeWeekly',
         name: 'writeWeekly',
         meta: {
-          key: '1'
+          key: '1-1'
         },
         component: writeWeekly
-      },{
+      }, {
         path: '/weeklyList',
         name: 'weeklyList',
         meta: {
-          key: '2'
+          key: '1-2'
         },
         component: weeklyList
       }]
     }
   ]
 })
-

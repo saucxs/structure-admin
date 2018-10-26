@@ -8,7 +8,7 @@
       v-model="weeklyContent">
     </el-input>
     <p>
-      <el-button type="primary" plain @click="submitWeekly">提交周报</el-button>
+      <el-button type="primary" plain @click="submitWeekly">提交内容</el-button>
     </p>
   </div>
 </template>

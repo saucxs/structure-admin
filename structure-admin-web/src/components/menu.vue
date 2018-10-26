@@ -10,11 +10,11 @@
       active-text-color="#ffd04b">
       <el-menu-item index="/writeWeekly">
         <i class="el-icon-menu"></i>
-        <span slot="title">写周报</span>
+        <span slot="title">模块1</span>
       </el-menu-item>
        <el-menu-item index="/weeklyList">
          <i class="el-icon-location"></i>
-         <span slot="title">历史周报</span>
+         <span slot="title">模块2</span>
        </el-menu-item>
       <!--<el-submenu index="/aManage">-->
         <!--<template slot="title">-->

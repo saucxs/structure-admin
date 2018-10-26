@@ -1,12 +1,13 @@
 const Base = require('./base');
 module.exports = class extends Base {
     async loginAction() {
-        let {usernum, password} = this.post();
-        const salt = 'weekly';
+        let {username, password} = this.post();
+        const salt = 'structure';
         password = think.md5(salt + password);
+        console.log(password,'323333333333333333333333333333333')
         try {
             let user = await this.model('user').where({
-                usernum,
+                username,
             }).find();
             if(user.password && user.password == password) {
                 // login success
@@ -23,7 +24,10 @@ module.exports = class extends Base {
     }
     async queryuserAction() {
         try {
-           console.log(this.user,'22222222222222222222222222');
+            this.user = {
+                username: this.user.username
+                // password: this.user.password
+            }
             return this.success(this.user);
         } catch(e) {
             console.log(e);

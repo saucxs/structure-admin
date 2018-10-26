@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.7.12, for Win64 (x86_64)
 --
--- Host: localhost    Database: weekly
+-- Host: localhost    Database: structure_admin
 -- ------------------------------------------------------
 -- Server version	5.7.16-log
 
@@ -16,55 +16,57 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `week_user`
+-- Table structure for table `structure_content`
 --
 
-DROP TABLE IF EXISTS `week_user`;
+DROP TABLE IF EXISTS `structure_content`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `week_user` (
+CREATE TABLE `structure_content` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `usernum` varchar(45) DEFAULT NULL,
   `username` varchar(45) DEFAULT NULL,
-  `password` varchar(120) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  `content` varchar(45) DEFAULT NULL,
+  `date` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `week_user`
+-- Dumping data for table `structure_content`
 --
 
-LOCK TABLES `week_user` WRITE;
-/*!40000 ALTER TABLE `week_user` DISABLE KEYS */;
-INSERT INTO `week_user` VALUES (1,'saucxs','saucxs','3043bc5449ee4f5b4163103288958217');
-/*!40000 ALTER TABLE `week_user` ENABLE KEYS */;
+LOCK TABLES `structure_content` WRITE;
+/*!40000 ALTER TABLE `structure_content` DISABLE KEYS */;
+INSERT INTO `structure_content` VALUES (1,'test','234325346','2018/10/26');
+/*!40000 ALTER TABLE `structure_content` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `week_week`
+-- Table structure for table `structure_user`
 --
 
-DROP TABLE IF EXISTS `week_week`;
+DROP TABLE IF EXISTS `structure_user`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `week_week` (
+CREATE TABLE `structure_user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `usernum` varchar(45) DEFAULT NULL,
-  `content` varchar(200) DEFAULT NULL,
-  `date` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+  `username` varchar(45) DEFAULT NULL,
+  `password` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`),
+  UNIQUE KEY `user_UNIQUE` (`username`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `week_week`
+-- Dumping data for table `structure_user`
 --
 
-LOCK TABLES `week_week` WRITE;
-/*!40000 ALTER TABLE `week_week` DISABLE KEYS */;
-INSERT INTO `week_week` VALUES (1,'saucxs','123adfhajfasjfkfsafsa','2018/9/18');
-/*!40000 ALTER TABLE `week_week` ENABLE KEYS */;
+LOCK TABLES `structure_user` WRITE;
+/*!40000 ALTER TABLE `structure_user` DISABLE KEYS */;
+INSERT INTO `structure_user` VALUES (1,'test','c21d44df0dc294923bd2c00b9fee564e');
+/*!40000 ALTER TABLE `structure_user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -76,4 +78,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-09-18 19:47:45
+-- Dump completed on 2018-10-26 14:02:52
