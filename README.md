@@ -1,5 +1,11 @@
-# structure-admin
-是一个后台管控系统的架子，技术栈：nodeJS+vue+vuex+mysql+redis，前端使用vue的element-ui的组件库，后端使用nodeJS的服务，数据库mysql，缓存使用的是redis
+# [structure-admin](https://github.com/saucxs/structure-admin)
+[![](https://img.shields.io/badge/Powered%20by-saucxs%20-brightgreen.svg)](https://github.com/saucxs/structure-admin)
+[![GitHub license](https://img.shields.io/github/license/saucxs/structure-admin.svg)](https://github.com/saucxs/structure-admin/blob/master/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/saucxs/structure-admin.svg)](https://github.com/saucxs/structure-admin/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/saucxs/structure-admin.svg)](https://github.com/saucxs/structure-admin/network)
+[![GitHub issues](https://img.shields.io/github/issues/saucxs/structure-admin.svg)](https://github.com/saucxs/structure-admin/issues)
+
+structure-admin是一个后台管控系统的架子，技术栈：nodeJS+vue+vuex+mysql+redis，前端使用vue的element-ui的组件库，后端使用nodeJS的服务，数据库mysql，缓存使用的是redis
 ，后端完全使用`nodeJS`，数据库使用`mysql`，基于`nodejs的thinkjs框架搭建的`，全栈开发。
 支持：
 > + 1、vuex来实现状态管理
