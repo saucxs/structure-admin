@@ -103,5 +103,6 @@ npm start
  ````
 
 ### 说明
-周报系统是基于structure-admin后台管理框架下搭建，周报系统演示地址为：[系统网站平台](http://weekly.mwcxs.top)
-周报系统源码地址：[周报系统源码地址](https://github.com/saucxs/weekly)
++ 周报系统是基于structure-admin后台管理框架下搭建，周报系统演示地址为：[系统网站平台](http://weekly.mwcxs.top)
++ 周报系统源码地址：[周报系统源码地址](https://github.com/saucxs/weekly)
++ 已经封装成npm包[vue-node-cli](https://github.com/saucxs/vue-node-cli)，形成前后端全栈开发-管控系统的模板。
