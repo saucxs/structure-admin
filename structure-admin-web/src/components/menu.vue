@@ -7,7 +7,8 @@
       background-color="#545c64"
       text-color="#fff"
       router = router
-      active-text-color="#ffd04b">
+      active-text-color="#ffd04b"
+      :default-active="$route.path>
       <el-menu-item index="/writeWeekly">
         <i class="el-icon-menu"></i>
         <span slot="title">模块1</span>
